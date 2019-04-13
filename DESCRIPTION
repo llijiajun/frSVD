@@ -1,0 +1,13 @@
+Package: frSVD
+Type: Package
+Title: Computing Approximate SVD of Sparse Matrix
+Version: 0.1.0
+Author: Jiajun Li
+Maintainer: Jiajun Li <ljjwujun@ruc.edu.cn>
+Description: Given an m by n sparse matrix A, function SVD() can approximately computer its largest k singular values and the corresponding singular vectors.The algorithm has similar accuracy to the basic randomized SVD (rPCA) algorithm (Halko et al., 2011), but is largely optimized for sparse data. It also has good flexibility to trade off runtime against accuracy for practical usage. https://arxiv.org/abs/1810.06825
+License: GPL(>=2)
+Encoding: UTF-8
+LazyData: true
+Imports: Rcpp (>= 0.12.11), RcppArmadillo
+LinkingTo: Rcpp, RcppArmadillo
+SystemRequirements: C++11
