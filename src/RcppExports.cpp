@@ -6,22 +6,22 @@
 
 using namespace Rcpp;
 
-// frsvd
-arma::vec frsvd(arma::sp_mat& X, int k, int q);
-RcppExport SEXP _frSVD_frsvd(SEXP XSEXP, SEXP kSEXP, SEXP qSEXP) {
+// frSVD
+RcppExport SEXP frSVD(arma::sp_mat& X, int k, int q);
+RcppExport SEXP _frSVD_frSVD(SEXP XSEXP, SEXP kSEXP, SEXP qSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< arma::sp_mat& >::type X(XSEXP);
     Rcpp::traits::input_parameter< int >::type k(kSEXP);
     Rcpp::traits::input_parameter< int >::type q(qSEXP);
-    rcpp_result_gen = Rcpp::wrap(frsvd(X, k, q));
+    rcpp_result_gen = Rcpp::wrap(frSVD(X, k, q));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_frSVD_frsvd", (DL_FUNC) &_frSVD_frsvd, 3},
+    {"_frSVD_frSVD", (DL_FUNC) &_frSVD_frSVD, 3},
     {NULL, NULL, 0}
 };
 
